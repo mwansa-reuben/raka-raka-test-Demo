@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
-import { Bird, Phone, Mail, MapPin } from "lucide-react";
+import { Bird, Phone, Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
 
 const Footer = () => {
+  const socialLinks = [
+    { icon: Facebook, href: "https://facebook.com/rakaraka", label: "Facebook" },
+    { icon: Instagram, href: "https://instagram.com/rakaraka", label: "Instagram" },
+    { icon: Twitter, href: "https://twitter.com/rakaraka", label: "Twitter" },
+  ];
   return (
     <footer className="bg-secondary text-secondary-foreground">
       <div className="container mx-auto px-4 py-12">
@@ -18,6 +23,21 @@ const Footer = () => {
               Zambia's trusted bulk poultry supplier, serving major businesses
               with quality chicken products since establishment.
             </p>
+            {/* Social Media Links */}
+            <div className="flex items-center gap-3 pt-2">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-secondary-foreground/10 hover:bg-accent hover:text-accent-foreground p-2 rounded-full transition-colors"
+                  aria-label={social.label}
+                >
+                  <social.icon className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Quick Links */}
