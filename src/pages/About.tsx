@@ -1,27 +1,34 @@
-import { Target, Eye, Heart, Award, Users, Clock } from "lucide-react";
+import { Target, Eye, Heart, Award, Users, Lightbulb } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const values = [
   {
+    icon: Lightbulb,
+    title: "Innovation",
+    description: "We strive to continuously improve our solutions to meet the varied needs of our customers.",
+  },
+  {
     icon: Award,
-    title: "Quality Excellence",
-    description: "We maintain the highest standards in poultry production and handling.",
+    title: "Reliability",
+    description: "We are committed to providing fast and secure trading solutions.",
   },
   {
     icon: Users,
-    title: "Customer First",
-    description: "Our clients' success is our success. We tailor solutions to your needs.",
+    title: "Partnership",
+    description: "We work closely with our clients to understand their needs and offer customized solutions.",
   },
   {
     icon: Heart,
     title: "Integrity",
-    description: "Honest business practices and transparent pricing in every transaction.",
+    description: "Ethical and sustainable business practices in every transaction.",
   },
-  {
-    icon: Clock,
-    title: "Reliability",
-    description: "Consistent supply and on-time delivery you can count on.",
-  },
+];
+
+const managementTeam = [
+  { name: "MUNUNG ERASMUS ERAS", role: "Director General" },
+  { name: "NSONGA KINAMA ARMED", role: "Chief Financial Officer" },
+  { name: "TOBI MITONGA", role: "Director of Operations" },
+  { name: "CHALWE CHIKOLA", role: "Country Manager" },
 ];
 
 const About = () => {
@@ -32,10 +39,10 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6">
-              About RAKA-RAKA
+              About RAKARAKA
             </h1>
             <p className="text-lg text-primary-foreground/90">
-              Your trusted partner in bulk poultry supply across Zambia
+              Your trusted partner in operational cash flow facilitation and working capital optimization
             </p>
           </div>
         </div>
@@ -47,25 +54,25 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Our Story
+                Who We Are
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  RAKA-RAKA was founded with a simple mission: to provide Zambian businesses
-                  with a reliable, high-quality source of bulk poultry products. What started
-                  as a small family operation has grown into one of the country's most trusted
-                  B2B poultry suppliers.
+                  RakaRaka Business Company Limited is an innovative company specializing in the trading 
+                  of goods and services to optimize cash management across multiple sectors including 
+                  Agriculture, Forestry, Fishing, Real Estate, Transport, and Administrative services.
                 </p>
                 <p>
-                  Today, we serve hundreds of businesses across Zambia, from major supermarket
-                  chains and hotels to restaurants and food processors. Our commitment to
-                  quality, competitive pricing, and exceptional service has made us the
-                  preferred choice for enterprises seeking a dependable poultry partner.
+                  In many high-turnover sectors, business opportunities exist but transactions do not 
+                  succeed due to bottlenecks in the cash cycle: suppliers limit exposure to commercial 
+                  risk, distributors lack immediate liquidity, and working capital flow is slowed.
+                </p>
+                <p className="font-semibold text-foreground">
+                  👉 RAKARAKA intervenes precisely at this blocking point.
                 </p>
                 <p>
-                  We take pride in supporting Zambia's food industry and contributing to the
-                  growth of local businesses. Every delivery we make represents our promise
-                  of excellence and our dedication to your success.
+                  We are an operational cash flow facilitator, a structuring commercial intermediary, 
+                  and a key player in the fluidification of working capital.
                 </p>
               </div>
             </div>
@@ -75,7 +82,7 @@ const About = () => {
                   <Users className="h-12 w-12 text-primary" />
                 </div>
                 <p className="text-muted-foreground">
-                  Serving Zambian Businesses Since Establishment
+                  RAKARAKA Business Company Limited
                 </p>
               </div>
             </div>
@@ -95,9 +102,8 @@ const About = () => {
                 Our Mission
               </h3>
               <p className="text-muted-foreground">
-                To be Zambia's most reliable bulk poultry supplier, delivering
-                quality products and exceptional service that helps our business
-                partners thrive and grow.
+                To offer fast and efficient solutions to improve cash flow through 
+                high-turnover trading operations, enabling businesses to thrive.
               </p>
             </div>
             <div className="bg-background p-8 rounded-lg border border-border">
@@ -108,9 +114,8 @@ const About = () => {
                 Our Vision
               </h3>
               <p className="text-muted-foreground">
-                To lead the Zambian poultry industry in B2B supply, setting
-                standards for quality, sustainability, and customer satisfaction
-                that others aspire to achieve.
+                To be the ideal partner and benchmark for trading in cash management 
+                optimization operations for small and medium-sized enterprises.
               </p>
             </div>
           </div>
@@ -125,7 +130,7 @@ const About = () => {
               Our Core Values
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              These principles guide everything we do at RAKA-RAKA
+              These principles guide everything we do at RAKARAKA
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -147,33 +152,63 @@ const About = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Management Team */}
+      <section className="py-16 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Management Team
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Our experienced leadership driving RAKARAKA forward
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {managementTeam.map((member) => (
+              <div
+                key={member.name}
+                className="bg-card p-6 rounded-lg border border-border text-center"
+              >
+                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="font-heading font-semibold text-foreground mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-muted-foreground text-sm">{member.role}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Value Proposition */}
       <section className="py-16 bg-secondary text-secondary-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
-              Why Businesses Choose RAKA-RAKA
+              Our Value Creation
             </h2>
             <ul className="space-y-4 text-left max-w-xl mx-auto">
               <li className="flex items-start gap-3">
                 <span className="text-accent text-xl">✓</span>
-                <span>Health-certified poultry meeting all Zambian food safety standards</span>
+                <span>Rapid and targeted intervention in cash flow bottlenecks</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-accent text-xl">✓</span>
-                <span>Competitive bulk pricing with volume discounts</span>
+                <span>Control of commercial cycles from supplier to distributor</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-accent text-xl">✓</span>
-                <span>Flexible ordering and custom delivery schedules</span>
+                <span>Clear structuring of flows between all parties</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-accent text-xl">✓</span>
-                <span>Dedicated account managers for enterprise clients</span>
+                <span>Remuneration aligned with actual transaction success</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-accent text-xl">✓</span>
-                <span>Nationwide delivery coverage across Zambia</span>
+                <span>Commitment to ethical and sustainable business practices</span>
               </li>
             </ul>
           </div>

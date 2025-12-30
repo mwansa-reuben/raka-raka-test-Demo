@@ -1,69 +1,69 @@
 import { Link } from "react-router-dom";
-import { Truck, ShoppingCart, Shield, Package, Clock, HeadphonesIcon, ArrowRight } from "lucide-react";
+import { Leaf, TreePine, Fish, Building, Truck, Briefcase, ArrowRight, TrendingUp, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 
 const services = [
   {
-    icon: Package,
-    title: "Bulk Chicken Supply",
+    icon: Leaf,
+    title: "Agriculture (Broiler Chicken & Slaughter)",
     description:
-      "Large-scale poultry supply for supermarkets, hotels, restaurants, and food processors. We handle orders of any size with consistent quality.",
+      "Comprehensive trading solutions for the poultry industry, including broiler chicken supply and slaughter operations with optimized cash flow management.",
     features: [
-      "Whole chickens, cuts, and processed products",
-      "Volume-based pricing tiers",
-      "Regular supply contracts available",
-      "Cold chain maintained throughout",
+      "Bulk poultry trading and supply",
+      "Cash flow optimization for agricultural operations",
+      "Supply chain financing support",
+      "Working capital solutions for farmers",
     ],
   },
   {
-    icon: ShoppingCart,
-    title: "Custom Orders",
+    icon: TreePine,
+    title: "Forestry",
     description:
-      "Tailored ordering options to meet your specific business requirements. Tell us what you need, and we'll deliver exactly that.",
+      "Trading and cash flow facilitation services for the forestry sector, enabling smooth transactions between timber suppliers and buyers.",
     features: [
-      "Flexible quantities and product mix",
-      "Custom packaging options",
-      "Scheduled delivery dates",
-      "Special processing requests",
+      "Timber trading facilitation",
+      "Forestry product supply chain support",
+      "Commercial intermediary services",
+      "Working capital optimization",
     ],
   },
   {
-    icon: Shield,
-    title: "Quality Assurance",
+    icon: Fish,
+    title: "Fishing",
     description:
-      "Every product meets strict quality and safety standards. We're committed to providing only the best to your customers.",
+      "Supporting the fishing industry with trading solutions that bridge the gap between catch and market, ensuring liquidity throughout the value chain.",
     features: [
-      "Health-certified products",
-      "Regular quality inspections",
-      "Traceability documentation",
-      "Compliance with Zambian food standards",
+      "Fish product trading support",
+      "Supply chain cash flow solutions",
+      "Market access facilitation",
+      "Quick-turn trading operations",
     ],
   },
   {
-    icon: Truck,
-    title: "Delivery Services",
+    icon: Building,
+    title: "Real Estate Activities",
     description:
-      "Reliable nationwide delivery to keep your business running smoothly. We deliver on time, every time.",
+      "Real estate trading and investment support services, helping property transactions succeed through effective cash management.",
     features: [
-      "Coverage across all Zambian provinces",
-      "Temperature-controlled transport",
-      "Flexible delivery windows",
-      "Real-time delivery tracking",
+      "Property transaction facilitation",
+      "Real estate investment support",
+      "Cash flow structuring for deals",
+      "Commercial property trading",
     ],
   },
 ];
 
 const additionalServices = [
   {
-    icon: Clock,
-    title: "Emergency Supply",
-    description: "Need an urgent order? We offer expedited processing for time-sensitive requirements.",
+    icon: Truck,
+    title: "Transport and Storage",
+    description: "Logistics and storage solutions with integrated cash flow management to keep your supply chain moving.",
   },
   {
-    icon: HeadphonesIcon,
-    title: "Dedicated Support",
-    description: "Enterprise clients get a dedicated account manager for personalized service.",
+    icon: Briefcase,
+    title: "Administrative & Support Activities",
+    description: "Comprehensive administrative support to streamline your business operations and optimize working capital.",
   },
 ];
 
@@ -78,8 +78,30 @@ const Services = () => {
               Our Services
             </h1>
             <p className="text-lg text-primary-foreground/90">
-              Comprehensive bulk poultry solutions designed for Zambian businesses
+              Fast trading solutions designed to meet short-term working capital needs across diverse sectors
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Value Proposition Banner */}
+      <section className="py-8 bg-accent/10 border-b border-accent/20">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-center">
+            <div className="flex items-center gap-3">
+              <TrendingUp className="h-6 w-6 text-accent" />
+              <span className="text-foreground font-medium">Operational Cash Flow Facilitator</span>
+            </div>
+            <div className="hidden md:block w-px h-6 bg-border"></div>
+            <div className="flex items-center gap-3">
+              <Briefcase className="h-6 w-6 text-accent" />
+              <span className="text-foreground font-medium">Structuring Commercial Intermediary</span>
+            </div>
+            <div className="hidden md:block w-px h-6 bg-border"></div>
+            <div className="flex items-center gap-3">
+              <Shield className="h-6 w-6 text-accent" />
+              <span className="text-foreground font-medium">Working Capital Fluidification</span>
+            </div>
           </div>
         </div>
       </section>
@@ -132,10 +154,10 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Additional Support
+              Additional Services
             </h2>
             <p className="text-muted-foreground">
-              Extra services to ensure your business runs smoothly
+              Comprehensive support to keep your business operations running smoothly
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
@@ -162,10 +184,10 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-              Ready to Get Started?
+              Ready to Optimize Your Working Capital?
             </h2>
             <p className="text-secondary-foreground/80 mb-8">
-              Contact us today to discuss your bulk poultry requirements and get a customized quote.
+              Contact us today to discuss how RAKARAKA can help transform stalled trade into smooth, executed transactions.
             </p>
             <Button
               asChild
@@ -173,7 +195,7 @@ const Services = () => {
               className="bg-accent text-accent-foreground hover:bg-accent/90"
             >
               <Link to="/contact">
-                Request a Quote <ArrowRight className="ml-2 h-5 w-5" />
+                Get Started <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>
