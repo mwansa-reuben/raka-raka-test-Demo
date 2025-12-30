@@ -28,7 +28,7 @@ const managementTeam = [
   { name: "MUNUNG ERASMUS ERAS", role: "Director General" },
   { name: "NSONGA KINAMA ARMED", role: "Chief Financial Officer" },
   { name: "TOBI MITONGA", role: "Director of Operations" },
-  { name: "CHALWE CHIKOLA", role: "Country Manager" },
+  { name: "CHALWE CHIKOKA", role: "Country Manager" },
 ];
 
 const About = () => {
