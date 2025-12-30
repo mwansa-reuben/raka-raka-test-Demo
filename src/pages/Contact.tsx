@@ -16,13 +16,13 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    details: ["info@rakaraka.zm", "orders@rakaraka.zm"],
-    action: "mailto:info@rakaraka.zm",
+    details: ["info@rakaraka.com", "business@rakaraka.com"],
+    action: "mailto:info@rakaraka.com",
   },
   {
     icon: MapPin,
     title: "Address",
-    details: ["123 Industrial Road", "Lusaka, Zambia"],
+    details: ["Registered Office", "Lusaka, Zambia"],
   },
   {
     icon: Clock,
@@ -38,6 +38,7 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
+    company: "",
     message: "",
   });
 
@@ -56,10 +57,10 @@ const Contact = () => {
 
     toast({
       title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you soon.",
+      description: "Thank you for contacting RAKARAKA. We'll get back to you soon.",
     });
 
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setFormData({ name: "", email: "", phone: "", company: "", message: "" });
     setIsSubmitting(false);
   };
 
@@ -73,7 +74,7 @@ const Contact = () => {
               Contact Us
             </h1>
             <p className="text-lg text-primary-foreground/90">
-              Get in touch for bulk orders, custom quotes, or any inquiries
+              Get in touch to discuss your working capital needs and business solutions
             </p>
           </div>
         </div>
@@ -103,7 +104,24 @@ const Contact = () => {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="John Mwale"
+                    placeholder="Your full name"
+                    className="w-full"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="company"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
+                    Company Name
+                  </label>
+                  <Input
+                    id="company"
+                    name="company"
+                    type="text"
+                    value={formData.company}
+                    onChange={handleChange}
+                    placeholder="Your company name"
                     className="w-full"
                   />
                 </div>
@@ -121,7 +139,7 @@ const Contact = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="john@company.zm"
+                    placeholder="your@email.com"
                     className="w-full"
                   />
                 </div>
@@ -155,7 +173,7 @@ const Contact = () => {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell us about your bulk order requirements..."
+                    placeholder="Tell us about your business needs and how we can help..."
                     rows={5}
                     className="w-full"
                   />
@@ -182,8 +200,9 @@ const Contact = () => {
                 Get in Touch
               </h2>
               <p className="text-muted-foreground mb-8">
-                Have questions about bulk orders? Need a custom quote? Our team is
-                ready to help you find the perfect solution for your business.
+                Have questions about our trading solutions? Need help optimizing your 
+                working capital? Our team is ready to help you find the perfect solution 
+                for your business.
               </p>
               <div className="space-y-6">
                 {contactInfo.map((item) => (
@@ -221,7 +240,7 @@ const Contact = () => {
                   Prefer to Talk?
                 </h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  Call us directly for immediate assistance with your bulk order.
+                  Call us directly for immediate assistance with your business needs.
                 </p>
                 <Button
                   asChild

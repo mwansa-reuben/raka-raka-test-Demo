@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Bird } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/rakaraka-logo.jpg";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -19,18 +20,12 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="bg-primary p-2 rounded-lg">
-              <Bird className="h-6 w-6 md:h-8 md:w-8 text-primary-foreground" />
-            </div>
-            <div>
-              <h1 className="font-heading text-xl md:text-2xl font-bold text-foreground">
-                RAKA-RAKA
-              </h1>
-              <p className="text-xs text-muted-foreground hidden sm:block">
-                Bulk Poultry Supplier
-              </p>
-            </div>
+          <Link to="/" className="flex items-center gap-3">
+            <img 
+              src={logo} 
+              alt="RAKARAKA Business Company Limited" 
+              className="h-12 md:h-14 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

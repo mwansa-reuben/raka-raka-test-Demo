@@ -1,10 +1,10 @@
-import { Phone, Truck, CheckCircle, Bird } from "lucide-react";
+import { Phone, Briefcase, CheckCircle, TrendingUp } from "lucide-react";
 
 const announcements = [
-  { icon: Bird, text: "Bulk Orders Welcome – Call Now!" },
+  { icon: Briefcase, text: "Cash Flow Solutions for Your Business" },
   { icon: Phone, text: "+260 XXX XXX XXX" },
-  { icon: Truck, text: "Delivery Across Zambia" },
-  { icon: CheckCircle, text: "Quality Assured Poultry" },
+  { icon: TrendingUp, text: "Working Capital Optimization" },
+  { icon: CheckCircle, text: "Trusted Trading Partner" },
 ];
 
 const AnnouncementBar = () => {

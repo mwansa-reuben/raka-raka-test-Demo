@@ -1,48 +1,48 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Truck, Shield, Users, Clock, CheckCircle } from "lucide-react";
+import { ArrowRight, TrendingUp, Shield, Users, Clock, CheckCircle, Briefcase, Building, Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 
 const stats = [
-  { value: "10+", label: "Years Experience" },
-  { value: "500+", label: "Business Clients" },
-  { value: "1M+", label: "Chickens Delivered" },
+  { value: "6+", label: "Business Sectors" },
+  { value: "100+", label: "Business Partners" },
+  { value: "Fast", label: "Cash Solutions" },
   { value: "24/7", label: "Support Available" },
 ];
 
-const features = [
+const sectors = [
   {
-    icon: Truck,
-    title: "Bulk Supply",
-    description: "Large-scale chicken supply for supermarkets, hotels, and restaurants across Zambia.",
+    icon: Leaf,
+    title: "Agriculture",
+    description: "Broiler chicken trading and slaughter operations across Zambia.",
   },
   {
-    icon: Shield,
-    title: "Quality Assured",
-    description: "Health-certified poultry meeting all Zambian food safety standards.",
+    icon: Building,
+    title: "Real Estate",
+    description: "Property activities and real estate investment solutions.",
   },
   {
-    icon: Users,
-    title: "Custom Orders",
-    description: "Flexible ordering tailored to your business needs and delivery schedules.",
+    icon: TrendingUp,
+    title: "Trading Services",
+    description: "Operational cash flow facilitation and working capital support.",
   },
   {
-    icon: Clock,
-    title: "Reliable Delivery",
-    description: "On-time delivery guaranteed to keep your business running smoothly.",
+    icon: Briefcase,
+    title: "Transport & Storage",
+    description: "Logistics and administrative support services.",
   },
 ];
 
 const testimonials = [
   {
-    quote: "RAKA-RAKA has been our trusted poultry supplier for 5 years. Their quality and reliability is unmatched.",
-    author: "John Mwale",
-    company: "Lusaka Grand Hotel",
+    quote: "RAKARAKA transformed our cash cycle bottleneck into smooth operations. Their quick intervention saved our quarterly targets.",
+    author: "Business Partner",
+    company: "Distribution Company",
   },
   {
-    quote: "The custom ordering system makes it easy to manage our weekly supply. Highly recommended for bulk buyers.",
-    author: "Sarah Banda",
-    company: "FreshMart Supermarkets",
+    quote: "The working capital support from RAKARAKA helped us execute transactions that were previously stalled. Highly recommended.",
+    author: "Managing Director",
+    company: "Agricultural Enterprise",
   },
 ];
 
@@ -55,11 +55,10 @@ const Home = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Zambia's Premier Bulk Poultry Supplier
+              Supporting Your Working Capital Rotation
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/90 mb-8">
-              Trusted by major Zambian businesses for quality chicken supply.
-              Custom orders, reliable delivery, and competitive pricing for your enterprise.
+              RAKARAKA provides operational financial support to transform stalled trade into smooth, secure, and executed transactions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -68,7 +67,7 @@ const Home = () => {
                 className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold"
               >
                 <Link to="/contact">
-                  Request a Quote <ArrowRight className="ml-2 h-5 w-5" />
+                  Get Started <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button
@@ -100,30 +99,73 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Value Proposition Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why Choose RAKA-RAKA?
+              Why Choose RAKARAKA?
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              We provide comprehensive poultry solutions designed for Zambia's largest businesses.
+              We intervene precisely at cash cycle bottlenecks, enabling transactions that would otherwise fail.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="bg-card p-6 rounded-lg border border-border hover:shadow-lg transition-shadow text-center">
+              <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="h-7 w-7 text-primary" />
+              </div>
+              <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
+                Rapid Intervention
+              </h3>
+              <p className="text-muted-foreground text-sm">Quick and targeted solutions when cash flow bottlenecks occur.</p>
+            </div>
+            <div className="bg-card p-6 rounded-lg border border-border hover:shadow-lg transition-shadow text-center">
+              <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="h-7 w-7 text-primary" />
+              </div>
+              <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
+                Secure Transactions
+              </h3>
+              <p className="text-muted-foreground text-sm">Clear structuring of flows between suppliers and distributors.</p>
+            </div>
+            <div className="bg-card p-6 rounded-lg border border-border hover:shadow-lg transition-shadow text-center">
+              <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="h-7 w-7 text-primary" />
+              </div>
+              <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
+                Partnership Focus
+              </h3>
+              <p className="text-muted-foreground text-sm">Remuneration aligned with the actual success of transactions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sectors Section */}
+      <section className="py-16 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Business Sectors
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Optimizing cash management across diverse high-turnover industries
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature) => (
+            {sectors.map((sector) => (
               <div
-                key={feature.title}
+                key={sector.title}
                 className="bg-card p-6 rounded-lg border border-border hover:shadow-lg transition-shadow"
               >
-                <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="h-6 w-6 text-primary" />
+                <div className="bg-accent/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <sector.icon className="h-6 w-6 text-accent" />
                 </div>
                 <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
-                  {feature.title}
+                  {sector.title}
                 </h3>
-                <p className="text-muted-foreground text-sm">{feature.description}</p>
+                <p className="text-muted-foreground text-sm">{sector.description}</p>
               </div>
             ))}
           </div>
@@ -135,11 +177,11 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-              Ready to Partner with Us?
+              Ready to Optimize Your Cash Flow?
             </h2>
             <p className="text-secondary-foreground/80 mb-8">
-              Join hundreds of Zambian businesses that trust RAKA-RAKA for their bulk poultry needs.
-              Get a customized quote today.
+              Partner with RAKARAKA to transform stalled trade into smooth, executed transactions. 
+              We are the ideal partner for the optimization of your business activities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -167,10 +209,10 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Trusted by Leading Businesses
+              Trusted by Business Partners
             </h2>
             <p className="text-muted-foreground">
-              See what our clients say about RAKA-RAKA
+              See what our partners say about RAKARAKA
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">

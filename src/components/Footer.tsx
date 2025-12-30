@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
-import { Bird, Phone, Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import logo from "@/assets/rakaraka-logo.jpg";
 
 const Footer = () => {
   const socialLinks = [
     { icon: Facebook, href: "https://facebook.com/rakaraka", label: "Facebook" },
     { icon: Instagram, href: "https://instagram.com/rakaraka", label: "Instagram" },
     { icon: Twitter, href: "https://twitter.com/rakaraka", label: "Twitter" },
+    { icon: Linkedin, href: "https://linkedin.com/company/rakaraka", label: "LinkedIn" },
   ];
+  
   return (
     <footer className="bg-secondary text-secondary-foreground">
       <div className="container mx-auto px-4 py-12">
@@ -14,14 +17,14 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
-              <div className="bg-primary p-2 rounded-lg">
-                <Bird className="h-6 w-6 text-primary-foreground" />
-              </div>
-              <span className="font-heading text-xl font-bold">RAKA-RAKA</span>
+              <img 
+                src={logo} 
+                alt="RAKARAKA Business Company Limited" 
+                className="h-16 w-auto bg-white rounded-lg p-1"
+              />
             </Link>
             <p className="text-secondary-foreground/80 text-sm">
-              Zambia's trusted bulk poultry supplier, serving major businesses
-              with quality chicken products since establishment.
+              RakaRaka Business Company Limited - Your trusted partner for operational cash flow facilitation and working capital optimization.
             </p>
             {/* Social Media Links */}
             <div className="flex items-center gap-3 pt-2">
@@ -69,12 +72,13 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="font-heading font-semibold text-lg mb-4">Our Services</h3>
+            <h3 className="font-heading font-semibold text-lg mb-4">Our Sectors</h3>
             <ul className="space-y-2 text-sm text-secondary-foreground/80">
-              <li>Bulk Chicken Supply</li>
-              <li>Custom Orders</li>
-              <li>Quality Assurance</li>
-              <li>Nationwide Delivery</li>
+              <li>Agriculture & Poultry</li>
+              <li>Forestry</li>
+              <li>Fishing</li>
+              <li>Real Estate</li>
+              <li>Transport & Storage</li>
             </ul>
           </div>
 
@@ -90,8 +94,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2 text-sm">
                 <Mail className="h-4 w-4 text-accent" />
-                <a href="mailto:info@rakaraka.zm" className="text-secondary-foreground/80 hover:text-accent transition-colors">
-                  info@rakaraka.zm
+                <a href="mailto:info@rakaraka.com" className="text-secondary-foreground/80 hover:text-accent transition-colors">
+                  info@rakaraka.com
                 </a>
               </li>
               <li className="flex items-start gap-2 text-sm">
@@ -106,7 +110,7 @@ const Footer = () => {
 
         <div className="border-t border-secondary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-sm text-secondary-foreground/60">
-            © {new Date().getFullYear()} RAKA-RAKA. All rights reserved. | Sample Demo Website
+            © {new Date().getFullYear()} RAKARAKA Business Company Limited. All rights reserved.
           </p>
         </div>
       </div>
