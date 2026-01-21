@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, TrendingUp, Shield, Users, Clock, CheckCircle, Briefcase, Building, Leaf } from "lucide-react";
+import { ArrowRight, TrendingUp, Shield, Users, CheckCircle, Briefcase, Building, Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
+import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 
 const stats = [
   { value: "6+", label: "Business Sectors" },
@@ -110,34 +111,58 @@ const Home = () => {
               We intervene precisely at cash cycle bottlenecks, enabling transactions that would otherwise fail.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-card p-6 rounded-lg border border-border hover:shadow-lg transition-shadow text-center">
-              <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="h-7 w-7 text-primary" />
-              </div>
-              <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
-                Rapid Intervention
-              </h3>
-              <p className="text-muted-foreground text-sm">Quick and targeted solutions when cash flow bottlenecks occur.</p>
-            </div>
-            <div className="bg-card p-6 rounded-lg border border-border hover:shadow-lg transition-shadow text-center">
-              <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="h-7 w-7 text-primary" />
-              </div>
-              <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
-                Secure Transactions
-              </h3>
-              <p className="text-muted-foreground text-sm">Clear structuring of flows between suppliers and distributors.</p>
-            </div>
-            <div className="bg-card p-6 rounded-lg border border-border hover:shadow-lg transition-shadow text-center">
-              <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="h-7 w-7 text-primary" />
-              </div>
-              <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
-                Partnership Focus
-              </h3>
-              <p className="text-muted-foreground text-sm">Remuneration aligned with the actual success of transactions.</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            <CardContainer containerClassName="py-0">
+              <CardBody className="bg-card p-6 rounded-lg border border-border text-center">
+                <CardItem translateZ={50} className="w-full flex justify-center">
+                  <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                    <TrendingUp className="h-7 w-7 text-primary" />
+                  </div>
+                </CardItem>
+                <CardItem translateZ={40} className="w-full">
+                  <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
+                    Rapid Intervention
+                  </h3>
+                </CardItem>
+                <CardItem translateZ={30} className="w-full">
+                  <p className="text-muted-foreground text-sm">Quick and targeted solutions when cash flow bottlenecks occur.</p>
+                </CardItem>
+              </CardBody>
+            </CardContainer>
+            <CardContainer containerClassName="py-0">
+              <CardBody className="bg-card p-6 rounded-lg border border-border text-center">
+                <CardItem translateZ={50} className="w-full flex justify-center">
+                  <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                    <Shield className="h-7 w-7 text-primary" />
+                  </div>
+                </CardItem>
+                <CardItem translateZ={40} className="w-full">
+                  <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
+                    Secure Transactions
+                  </h3>
+                </CardItem>
+                <CardItem translateZ={30} className="w-full">
+                  <p className="text-muted-foreground text-sm">Clear structuring of flows between suppliers and distributors.</p>
+                </CardItem>
+              </CardBody>
+            </CardContainer>
+            <CardContainer containerClassName="py-0">
+              <CardBody className="bg-card p-6 rounded-lg border border-border text-center">
+                <CardItem translateZ={50} className="w-full flex justify-center">
+                  <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                    <Users className="h-7 w-7 text-primary" />
+                  </div>
+                </CardItem>
+                <CardItem translateZ={40} className="w-full">
+                  <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
+                    Partnership Focus
+                  </h3>
+                </CardItem>
+                <CardItem translateZ={30} className="w-full">
+                  <p className="text-muted-foreground text-sm">Remuneration aligned with the actual success of transactions.</p>
+                </CardItem>
+              </CardBody>
+            </CardContainer>
           </div>
         </div>
       </section>
@@ -153,20 +178,25 @@ const Home = () => {
               Optimizing cash management across diverse high-turnover industries
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {sectors.map((sector) => (
-              <div
-                key={sector.title}
-                className="bg-card p-6 rounded-lg border border-border hover:shadow-lg transition-shadow"
-              >
-                <div className="bg-accent/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <sector.icon className="h-6 w-6 text-accent" />
-                </div>
-                <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
-                  {sector.title}
-                </h3>
-                <p className="text-muted-foreground text-sm">{sector.description}</p>
-              </div>
+              <CardContainer key={sector.title} containerClassName="py-0">
+                <CardBody className="bg-card p-6 rounded-lg border border-border w-full">
+                  <CardItem translateZ={40}>
+                    <div className="bg-accent/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                      <sector.icon className="h-6 w-6 text-accent" />
+                    </div>
+                  </CardItem>
+                  <CardItem translateZ={30} className="w-full">
+                    <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
+                      {sector.title}
+                    </h3>
+                  </CardItem>
+                  <CardItem translateZ={20} className="w-full">
+                    <p className="text-muted-foreground text-sm">{sector.description}</p>
+                  </CardItem>
+                </CardBody>
+              </CardContainer>
             ))}
           </div>
         </div>
@@ -215,25 +245,30 @@ const Home = () => {
               See what our partners say about RAKARAKA
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
             {testimonials.map((testimonial) => (
-              <div
-                key={testimonial.author}
-                className="bg-card p-6 rounded-lg border border-border"
-              >
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <CheckCircle key={i} className="h-5 w-5 text-accent" />
-                  ))}
-                </div>
-                <blockquote className="text-foreground mb-4 italic">
-                  "{testimonial.quote}"
-                </blockquote>
-                <div>
-                  <div className="font-semibold text-foreground">{testimonial.author}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.company}</div>
-                </div>
-              </div>
+              <CardContainer key={testimonial.author} containerClassName="py-0">
+                <CardBody className="bg-card p-6 rounded-lg border border-border w-full">
+                  <CardItem translateZ={30} className="w-full">
+                    <div className="flex gap-1 mb-4">
+                      {[...Array(5)].map((_, i) => (
+                        <CheckCircle key={i} className="h-5 w-5 text-accent" />
+                      ))}
+                    </div>
+                  </CardItem>
+                  <CardItem translateZ={50} className="w-full">
+                    <blockquote className="text-foreground mb-4 italic">
+                      "{testimonial.quote}"
+                    </blockquote>
+                  </CardItem>
+                  <CardItem translateZ={20} className="w-full">
+                    <div>
+                      <div className="font-semibold text-foreground">{testimonial.author}</div>
+                      <div className="text-sm text-muted-foreground">{testimonial.company}</div>
+                    </div>
+                  </CardItem>
+                </CardBody>
+              </CardContainer>
             ))}
           </div>
         </div>
