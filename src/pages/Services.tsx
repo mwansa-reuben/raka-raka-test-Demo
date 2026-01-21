@@ -2,11 +2,16 @@ import { Link } from "react-router-dom";
 import { Leaf, TreePine, Fish, Building, Truck, Briefcase, ArrowRight, TrendingUp, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
+import agricultureImg from "@/assets/service-agriculture.jpg";
+import forestryImg from "@/assets/service-forestry.jpg";
+import fishingImg from "@/assets/service-fishing.jpg";
+import realestateImg from "@/assets/service-realestate.jpg";
 
 const services = [
   {
     icon: Leaf,
     title: "Agriculture (Broiler Chicken & Slaughter)",
+    image: agricultureImg,
     description:
       "Comprehensive trading solutions for the poultry industry, including broiler chicken supply and slaughter operations with optimized cash flow management.",
     features: [
@@ -19,6 +24,7 @@ const services = [
   {
     icon: TreePine,
     title: "Forestry",
+    image: forestryImg,
     description:
       "Trading and cash flow facilitation services for the forestry sector, enabling smooth transactions between timber suppliers and buyers.",
     features: [
@@ -31,6 +37,7 @@ const services = [
   {
     icon: Fish,
     title: "Fishing",
+    image: fishingImg,
     description:
       "Supporting the fishing industry with trading solutions that bridge the gap between catch and market, ensuring liquidity throughout the value chain.",
     features: [
@@ -43,6 +50,7 @@ const services = [
   {
     icon: Building,
     title: "Real Estate Activities",
+    image: realestateImg,
     description:
       "Real estate trading and investment support services, helping property transactions succeed through effective cash management.",
     features: [
@@ -135,13 +143,15 @@ const Services = () => {
                   </ul>
                 </div>
                 <div
-                  className={`bg-muted rounded-lg aspect-video flex items-center justify-center ${
+                  className={`rounded-lg aspect-video overflow-hidden ${
                     index % 2 === 1 ? "lg:order-1" : ""
                   }`}
                 >
-                  <div className="text-center p-8">
-                    <service.icon className="h-16 w-16 text-primary/30 mx-auto" />
-                  </div>
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
               </div>
             ))}
