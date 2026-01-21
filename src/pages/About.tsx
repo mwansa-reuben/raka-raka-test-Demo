@@ -1,5 +1,10 @@
-import { Target, Eye, Heart, Award, Users, Lightbulb } from "lucide-react";
+import { Target, Eye, Heart, Award, Lightbulb, Handshake } from "lucide-react";
 import Layout from "@/components/Layout";
+import teamCollaboration from "@/assets/team-collaboration.jpg";
+import teamMember1 from "@/assets/team-member-1.jpg";
+import teamMember2 from "@/assets/team-member-2.jpg";
+import teamMember3 from "@/assets/team-member-3.jpg";
+import teamMember4 from "@/assets/team-member-4.jpg";
 
 const values = [
   {
@@ -13,7 +18,7 @@ const values = [
     description: "We are committed to providing fast and secure trading solutions.",
   },
   {
-    icon: Users,
+    icon: Handshake,
     title: "Partnership",
     description: "We work closely with our clients to understand their needs and offer customized solutions.",
   },
@@ -25,10 +30,10 @@ const values = [
 ];
 
 const managementTeam = [
-  { name: "MUNUNG ERASMUS ERAS", role: "Director General" },
-  { name: "NSONGA KINAMA ARMED", role: "Chief Financial Officer" },
-  { name: "TOBI MITONGA", role: "Director of Operations" },
-  { name: "CHALWE CHIKOKA", role: "Country Manager" },
+  { name: "MUNUNG ERASMUS ERAS", role: "Director General", image: teamMember1 },
+  { name: "NSONGA KINAMA ARMED", role: "Chief Financial Officer", image: teamMember2 },
+  { name: "TOBI MITONGA", role: "Director of Operations", image: teamMember3 },
+  { name: "CHALWE CHIKOKA", role: "Country Manager", image: teamMember4 },
 ];
 
 const About = () => {
@@ -76,15 +81,12 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-muted rounded-lg aspect-video flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="bg-primary/10 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="h-12 w-12 text-primary" />
-                </div>
-                <p className="text-muted-foreground">
-                  RAKARAKA Business Company Limited
-                </p>
-              </div>
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src={teamCollaboration} 
+                alt="RAKARAKA Business Team Collaboration" 
+                className="w-full h-full object-cover aspect-video"
+              />
             </div>
           </div>
         </div>
@@ -169,8 +171,12 @@ const About = () => {
                 key={member.name}
                 className="bg-card p-6 rounded-lg border border-border text-center"
               >
-                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="h-8 w-8 text-primary" />
+                <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20">
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="font-heading font-semibold text-foreground mb-1">
                   {member.name}
