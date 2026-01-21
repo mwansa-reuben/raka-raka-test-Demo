@@ -34,7 +34,7 @@ const Header = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`nav-link-highlight text-sm font-medium transition-colors hover:text-primary ${
                   location.pathname === link.path
                     ? "text-primary"
                     : "text-muted-foreground"
@@ -43,7 +43,7 @@ const Header = () => {
                 {link.name}
               </Link>
             ))}
-            <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button asChild className="hover-shake bg-accent text-accent-foreground hover:bg-accent/90">
               <Link to="/contact">Get Quote</Link>
             </Button>
           </nav>
