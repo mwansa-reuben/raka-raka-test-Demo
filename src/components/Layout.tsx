@@ -13,8 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
     <div className="min-h-screen flex flex-col">
       <AnnouncementBar />
       <Header />
-      {/* Add padding-top to account for fixed navbar */}
-      <main className="flex-1 pt-20">{children}</main>
+      <main className="flex-1">{children}</main>
       <Footer />
       <WhatsAppButton />
     </div>
