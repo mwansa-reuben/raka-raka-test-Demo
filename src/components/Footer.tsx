@@ -112,6 +112,9 @@ const Footer = () => {
           <p className="text-sm text-secondary-foreground/60">
             © {new Date().getFullYear()} RAKARAKA Business Company Limited. All rights reserved.
           </p>
+          <p className="text-xs text-secondary-foreground/40 mt-1">
+            Built by Mwansa R Chikoka
+          </p>
         </div>
       </div>
     </footer>
