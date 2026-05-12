@@ -30,10 +30,10 @@ const values = [
 ];
 
 const managementTeam = [
-  { name: "MUNUNG ERASMUS ERAS", role: "Director General", image: teamMember1 },
+  { name: "ERAS MUNUNG", role: "Director General", image: teamMember1 },
   { name: "NSONGA KINAMA ARMED", role: "Chief Financial Officer", image: teamMember2 },
-  { name: "TOBI MITONGA", role: "Director of Operations", image: teamMember3 },
-  { name: "CHALWE CHIKOKA", role: "Country Manager", image: teamMember4 },
+  { name: "TOBI MTONGA", role: "Director of Operations", image: teamMember3 },
+  { name: "CHALWE CHIKOKA BANDA", role: "Country Manager", image: teamMember4 },
 ];
 
 const About = () => {
