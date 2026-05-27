@@ -227,7 +227,7 @@ const Home = () => {
                 variant="outline"
                 className="border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground/10"
               >
-                <a href="tel:+260XXXXXXXXX">Call: +260 XXX XXX XXX</a>
+                <a href="tel:+260977375545">Call: +260 977 375 545</a>
               </Button>
             </div>
           </div>

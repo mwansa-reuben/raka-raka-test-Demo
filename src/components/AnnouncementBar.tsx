@@ -2,7 +2,7 @@ import { Phone, Briefcase, CheckCircle, TrendingUp } from "lucide-react";
 
 const announcements = [
   { icon: Briefcase, text: "Cash Flow Solutions for Your Business" },
-  { icon: Phone, text: "+260 XXX XXX XXX" },
+  { icon: Phone, text: "+260 977 375 545" },
   { icon: TrendingUp, text: "Working Capital Optimization" },
   { icon: CheckCircle, text: "Trusted Trading Partner" },
 ];
