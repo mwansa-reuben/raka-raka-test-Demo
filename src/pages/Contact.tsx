@@ -10,8 +10,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: ["+260 XXX XXX XXX", "+260 XXX XXX XXX"],
-    action: "tel:+260XXXXXXXXX",
+    details: ["+260 977 375 545", "+260 977 375 545"],
+    action: "tel:+260977375545",
   },
   {
     icon: Mail,
@@ -156,7 +156,7 @@ const Contact = () => {
                     type="tel"
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="+260 XXX XXX XXX"
+                    placeholder="+260 977 375 545"
                     className="w-full"
                   />
                 </div>
@@ -246,9 +246,9 @@ const Contact = () => {
                   asChild
                   className="bg-accent text-accent-foreground hover:bg-accent/90"
                 >
-                  <a href="tel:+260XXXXXXXXX">
+                  <a href="tel:+260977375545">
                     <Phone className="mr-2 h-4 w-4" />
-                    Call Now: +260 XXX XXX XXX
+                    Call Now: +260 977 375 545
                   </a>
                 </Button>
               </div>
