@@ -5,7 +5,13 @@ import team3 from "@/assets/team-3.jpg";
 import team4 from "@/assets/team-4.jpg";
 import team5 from "@/assets/team-5.jpg";
 
-const slides = [team1, team2, team3, team4, team5];
+const slides = [
+  { src: team1, position: "object-[center_50%]" },
+  { src: team2, position: "object-[center_70%]" },
+  { src: team3, position: "object-[center_75%]" },
+  { src: team4, position: "object-[center_65%]" },
+  { src: team5, position: "object-[center_80%]" },
+];
 
 const HeroSlider = () => {
   const [index, setIndex] = useState(0);
@@ -19,13 +25,13 @@ const HeroSlider = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-[300px] sm:h-[400px] md:h-[420px] lg:h-[500px] overflow-hidden bg-muted">
-      {slides.map((src, i) => (
+    <section className="relative w-full h-[220px] sm:h-[320px] md:h-[420px] lg:h-[500px] overflow-hidden bg-muted">
+      {slides.map((slide, i) => (
         <img
-          key={src}
-          src={src}
+          key={slide.src}
+          src={slide.src}
           alt={`RAKARAKA team moment ${i + 1}`}
-          className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ${
+          className={`absolute inset-0 w-full h-full object-cover ${slide.position} transition-opacity duration-1000 ${
             i === index ? "opacity-100" : "opacity-0"
           }`}
           loading={i === 0 ? "eager" : "lazy"}
@@ -39,9 +45,7 @@ const HeroSlider = () => {
             onClick={() => setIndex(i)}
             aria-label={`Go to slide ${i + 1}`}
             className={`h-2 rounded-full transition-all ${
-              i === index
-                ? "w-8 bg-accent"
-                : "w-2 bg-white/70 hover:bg-white"
+              i === index ? "w-8 bg-accent" : "w-2 bg-white/70 hover:bg-white"
             }`}
           />
         ))}
