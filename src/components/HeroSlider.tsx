@@ -5,13 +5,7 @@ import team3 from "@/assets/team-3.jpg";
 import team4 from "@/assets/team-4.jpg";
 import team5 from "@/assets/team-5.jpg";
 
-const slides = [
-  { src: team1, position: "object-[center_30%]" },
-  { src: team2, position: "object-top" },
-  { src: team3, position: "object-top" },
-  { src: team4, position: "object-top" },
-  { src: team5, position: "object-top" },
-];
+const slides = [team1, team2, team3, team4, team5];
 
 const HeroSlider = () => {
   const [index, setIndex] = useState(0);
@@ -20,31 +14,34 @@ const HeroSlider = () => {
     const id = setInterval(() => {
       setIndex((i) => (i + 1) % slides.length);
     }, 4000);
+
     return () => clearInterval(id);
   }, []);
 
   return (
-    <section className="relative w-full h-[180px] sm:h-[250px] md:h-[350px] lg:h-[400px] overflow-hidden bg-muted">
-      {slides.map((slide, i) => (
+    <section className="relative w-full h-[220px] sm:h-[320px] md:h-[420px] lg:h-[500px] overflow-hidden bg-muted">
+      {slides.map((src, i) => (
         <img
-          key={slide.src}
-          src={slide.src}
+          key={src}
+          src={src}
           alt={`RAKARAKA team moment ${i + 1}`}
-          className={`absolute inset-0 w-full h-full object-cover ${slide.position} transition-opacity duration-1000 ${
+          className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ${
             i === index ? "opacity-100" : "opacity-0"
           }`}
           loading={i === 0 ? "eager" : "lazy"}
         />
       ))}
 
-      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
         {slides.map((_, i) => (
           <button
             key={i}
             onClick={() => setIndex(i)}
             aria-label={`Go to slide ${i + 1}`}
             className={`h-2 rounded-full transition-all ${
-              i === index ? "w-8 bg-accent" : "w-2 bg-white/70 hover:bg-white"
+              i === index
+                ? "w-8 bg-accent"
+                : "w-2 bg-white/70 hover:bg-white"
             }`}
           />
         ))}
