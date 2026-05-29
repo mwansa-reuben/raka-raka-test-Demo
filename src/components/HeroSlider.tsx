@@ -8,7 +8,7 @@ import team5 from "@/assets/team-5.jpg";
 const slides = [
   { src: team1, position: "object-[center_50%]" },
   { src: team2, position: "object-[center_70%]" },
-  { src: team3, position: "object-[center_75%]" },
+  { src: team3, position: "object-[center_50%]" },
   { src: team4, position: "object-[center_65%]" },
   { src: team5, position: "object-[center_40%]" },
 ];
