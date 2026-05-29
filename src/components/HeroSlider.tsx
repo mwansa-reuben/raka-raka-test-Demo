@@ -10,7 +10,7 @@ const slides = [
   { src: team2, position: "object-[center_70%]" },
   { src: team3, position: "object-[center_50%]" },
   { src: team4, position: "object-[center_28%]" },
-  { src: team5, position: "object-[center_28%]" },
+  { src: team5, position: "object-[center_25%]" },
 ];
 
 const HeroSlider = () => {
