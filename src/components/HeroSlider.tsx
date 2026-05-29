@@ -18,7 +18,7 @@ const HeroSlider = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-[280px] sm:h-[380px] md:h-[480px] lg:h-[560px] overflow-hidden bg-muted">
+    <section className="relative w-full h-[220px] sm:h-[300px] md:h-[480px] lg:h-[450px] overflow-hidden bg-muted">
       {slides.map((src, i) => (
         <img
           key={src}
