@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 const folder = "/gallery/RAKARAKA-Zambia-Office-Launch/";
 
 const images = [
+  "_DSC1560.jpg",
   "_DSC1528.jpg",
   "_DSC1529.jpg",
   "_DSC1545.jpg",
@@ -15,7 +16,6 @@ const images = [
   "_DSC1553-Edit.jpg",
   "_DSC1557.jpg",
   "_DSC1559.jpg",
-  "_DSC1560.jpg",
   "_DSC1565.jpg",
   "_DSC1569.jpg",
   "_DSC1575.jpg",
@@ -51,7 +51,7 @@ const Gallery = () => {
                 className="w-full group overflow-hidden rounded-xl border border-border bg-card shadow-sm hover:shadow-lg transition-all text-left"
               >
                 <img
-                  src={`${folder}_DSC1528.jpg`}
+                  src={`${folder}_DSC1560.jpg`}
                   alt="RAKARAKA Zambia Office Launch"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
