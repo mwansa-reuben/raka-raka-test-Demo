@@ -8,6 +8,7 @@ const navLinks = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/about" },
   { name: "Services", path: "/services" },
+  { name: "Gallery", path: "/gallery", isGallery: true },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -19,36 +20,47 @@ const Header = () => {
     <header className="bg-card shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <img 
-              src={logo} 
-              alt="RAKARAKA Business Company Limited" 
+            <img
+              src={logo}
+              alt="RAKARAKA Business Company Limited"
               className="h-12 md:h-14 w-auto"
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex flex-1 justify-center items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`nav-link-highlight text-sm font-medium transition-colors hover:text-primary ${
-                  location.pathname === link.path
-                    ? "text-primary"
-                    : "text-muted-foreground"
-                }`}
+                className={
+                  link.isGallery
+                    ? `border-2 rounded-md px-4 py-2 text-sm font-medium transition-colors ${
+                        location.pathname === link.path
+                          ? "border-red-600 text-red-600"
+                          : "border-red-600 text-red-600 hover:border-gray-500 hover:text-gray-600"
+                      }`
+                    : `nav-link-highlight text-sm font-medium transition-colors hover:text-primary ${
+                        location.pathname === link.path
+                          ? "text-primary"
+                          : "text-muted-foreground"
+                      }`
+                }
               >
                 {link.name}
               </Link>
             ))}
-            <Button asChild className="hover-shake bg-accent text-accent-foreground hover:bg-accent/90">
-              <Link to="/contact">Get Quote</Link>
-            </Button>
           </nav>
 
-          {/* Mobile Menu Button */}
+          <div className="hidden md:block">
+            <Button
+              asChild
+              className="hover-shake bg-accent text-accent-foreground hover:bg-accent/90"
+            >
+              <Link to="/contact">Get Quote</Link>
+            </Button>
+          </div>
+
           <button
             className="md:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -62,7 +74,6 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden pb-4 border-t border-border">
             <div className="flex flex-col gap-2 pt-4">
@@ -71,15 +82,24 @@ const Header = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`py-2 px-4 rounded-md text-sm font-medium transition-colors ${
-                    location.pathname === link.path
-                      ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground hover:bg-muted"
-                  }`}
+                  className={
+                    link.isGallery
+                      ? `py-2 px-4 rounded-md text-sm font-medium border-2 transition-colors ${
+                          location.pathname === link.path
+                            ? "border-red-600 text-red-600"
+                            : "border-red-600 text-red-600 hover:border-gray-500 hover:text-gray-600"
+                        }`
+                      : `py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+                          location.pathname === link.path
+                            ? "bg-primary text-primary-foreground"
+                            : "text-muted-foreground hover:bg-muted"
+                        }`
+                  }
                 >
                   {link.name}
                 </Link>
               ))}
+
               <Button
                 asChild
                 className="mt-2 bg-accent text-accent-foreground hover:bg-accent/90"
