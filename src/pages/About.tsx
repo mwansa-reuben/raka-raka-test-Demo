@@ -76,7 +76,7 @@ const About = () => {
                 </p>
 
                 <p className="font-semibold text-foreground">
-                  👉 RAKARAKA intervenes precisely at this blocking point.
+                      RAKARAKA intervenes precisely at this blocking point.
                 </p>
 
                 <p>
