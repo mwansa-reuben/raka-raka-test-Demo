@@ -7,8 +7,11 @@ const folder = "/gallery/RAKARAKA-Zambia-Office-Launch/";
 
 const images = [
   "_DSC1528.jpg",
+  "_DSC1529.jpg",
   "_DSC1545.jpg",
+  "_DSC1549.jpg",
   "_DSC1551.jpg",
+  "_DSC1552.jpg",
   "_DSC1553-Edit.jpg",
   "_DSC1557.jpg",
   "_DSC1559.jpg",
@@ -20,10 +23,7 @@ const images = [
   "_DSC1595.jpg",
   "_DSC1614.jpg",
   "_DSC1627-2.jpg",
-  "_DSC1712.jpg", 
-  "_DSC1529.jpg",
-   "_DSC1549.jpg",
-   "_DSC1552.jpg",
+  "_DSC1712.jpg",
 ];
 
 const Gallery = () => {
@@ -45,7 +45,7 @@ const Gallery = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           {!openFolder ? (
-            <div className="max-w-md mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <button
                 onClick={() => setOpenFolder(true)}
                 className="w-full group overflow-hidden rounded-xl border border-border bg-card shadow-sm hover:shadow-lg transition-all text-left"
@@ -72,7 +72,7 @@ const Gallery = () => {
             </div>
           ) : (
             <>
-              <div className="flex items-center justify-between gap-4 mb-10">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
                 <div>
                   <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-2">
                     RAKARAKA Zambia Office Launch
@@ -85,7 +85,7 @@ const Gallery = () => {
                 <Button
                   variant="outline"
                   onClick={() => setOpenFolder(false)}
-                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground w-fit"
                 >
                   <ArrowLeft className="mr-2 h-4 w-4" />
                   Back
