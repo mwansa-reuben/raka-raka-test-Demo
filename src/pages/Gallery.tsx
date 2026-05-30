@@ -20,7 +20,10 @@ const images = [
   "_DSC1595.jpg",
   "_DSC1614.jpg",
   "_DSC1627-2.jpg",
-  "_DSC1712.jpg",
+  "_DSC1712.jpg", 
+  "_DSC1529.jpg",
+   "_DSC1549.jpg",
+   "_DSC1552.jpg",
 ];
 
 const Gallery = () => {
