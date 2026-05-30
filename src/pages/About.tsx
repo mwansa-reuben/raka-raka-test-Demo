@@ -1,6 +1,6 @@
 import { Target, Eye, Heart, Award, Lightbulb, Handshake } from "lucide-react";
 import Layout from "@/components/Layout";
-import teamCollaboration from "@/assets/team-collaboration.jpg";
+import aboutTeam from "@/assets/about-rakaraka-team.jpg";
 import teamMember1 from "@/assets/team-member-1.jpg";
 import teamMember2 from "@/assets/team-member-2.jpg";
 import teamMember3 from "@/assets/team-member-3.jpg";
@@ -10,7 +10,8 @@ const values = [
   {
     icon: Lightbulb,
     title: "Innovation",
-    description: "We strive to continuously improve our solutions to meet the varied needs of our customers.",
+    description:
+      "We strive to continuously improve our solutions to meet the varied needs of our customers.",
   },
   {
     icon: Award,
@@ -20,7 +21,8 @@ const values = [
   {
     icon: Handshake,
     title: "Partnership",
-    description: "We work closely with our clients to understand their needs and offer customized solutions.",
+    description:
+      "We work closely with our clients to understand their needs and offer customized solutions.",
   },
   {
     icon: Heart,
@@ -39,7 +41,6 @@ const managementTeam = [
 const About = () => {
   return (
     <Layout>
-      {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -53,46 +54,55 @@ const About = () => {
         </div>
       </section>
 
-      {/* Story Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Who We Are
+                Our Team
               </h2>
+
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  RakaRaka Business Company Limited is an innovative company specializing in the trading 
-                  of goods and services to optimize cash management across multiple sectors including 
+                  RakaRaka Business Company Limited is an innovative company specializing in the trading
+                  of goods and services to optimize cash management across multiple sectors including
                   Agriculture, Forestry, Fishing, Real Estate, Transport, and Administrative services.
                 </p>
+
                 <p>
-                  In many high-turnover sectors, business opportunities exist but transactions do not 
-                  succeed due to bottlenecks in the cash cycle: suppliers limit exposure to commercial 
+                  In many high-turnover sectors, business opportunities exist but transactions do not
+                  succeed due to bottlenecks in the cash cycle: suppliers limit exposure to commercial
                   risk, distributors lack immediate liquidity, and working capital flow is slowed.
                 </p>
+
                 <p className="font-semibold text-foreground">
                   👉 RAKARAKA intervenes precisely at this blocking point.
                 </p>
+
                 <p>
-                  We are an operational cash flow facilitator, a structuring commercial intermediary, 
+                  We are an operational cash flow facilitator, a structuring commercial intermediary,
                   and a key player in the fluidification of working capital.
+                </p>
+
+                <p>
+                  Our leadership and operational team combines expertise in business development,
+                  finance, administration, and strategic partnerships, enabling RAKARAKA to deliver
+                  reliable and innovative solutions across multiple sectors.
                 </p>
               </div>
             </div>
-            <div className="rounded-lg overflow-hidden shadow-lg">
-              <img 
-                src={teamCollaboration} 
-                alt="RAKARAKA Business Team Collaboration" 
-                className="w-full h-full object-cover aspect-video"
+
+            <div className="rounded-lg overflow-hidden shadow-lg border border-border bg-card">
+              <img
+                src={aboutTeam}
+                alt="RAKARAKA Zambia Leadership Team"
+                className="w-full h-auto object-contain"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision */}
       <section className="py-16 bg-card">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -104,10 +114,11 @@ const About = () => {
                 Our Mission
               </h3>
               <p className="text-muted-foreground">
-                To offer fast and efficient solutions to improve cash flow through 
+                To offer fast and efficient solutions to improve cash flow through
                 high-turnover trading operations, enabling businesses to thrive.
               </p>
             </div>
+
             <div className="bg-background p-8 rounded-lg border border-border">
               <div className="bg-primary/10 w-14 h-14 rounded-lg flex items-center justify-center mb-4">
                 <Eye className="h-7 w-7 text-primary" />
@@ -116,7 +127,7 @@ const About = () => {
                 Our Vision
               </h3>
               <p className="text-muted-foreground">
-                To be the ideal partner and benchmark for trading in cash management 
+                To be the ideal partner and benchmark for trading in cash management
                 optimization operations for small and medium-sized enterprises.
               </p>
             </div>
@@ -124,7 +135,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -135,12 +145,10 @@ const About = () => {
               These principles guide everything we do at RAKARAKA
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value) => (
-              <div
-                key={value.title}
-                className="text-center p-6"
-              >
+              <div key={value.title} className="text-center p-6">
                 <div className="bg-accent/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <value.icon className="h-8 w-8 text-accent" />
                 </div>
@@ -154,7 +162,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Management Team */}
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -165,6 +172,7 @@ const About = () => {
               Our experienced leadership driving RAKARAKA forward
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {managementTeam.map((member) => (
               <div
@@ -172,9 +180,9 @@ const About = () => {
                 className="bg-card p-6 rounded-lg border border-border text-center"
               >
                 <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
+                  <img
+                    src={member.image}
+                    alt={member.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -188,13 +196,13 @@ const About = () => {
         </div>
       </section>
 
-      {/* Value Proposition */}
       <section className="py-16 bg-secondary text-secondary-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
               Our Value Creation
             </h2>
+
             <ul className="space-y-4 text-left max-w-xl mx-auto">
               <li className="flex items-start gap-3">
                 <span className="text-accent text-xl">✓</span>
