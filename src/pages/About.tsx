@@ -4,7 +4,7 @@ import aboutTeam from "@/assets/about-rakaraka-team.jpg";
 import teamMember1 from "@/assets/team-member-1.jpg";
 import teamMember2 from "@/assets/team-member-2.jpg";
 import teamMember3 from "@/assets/team-member-3.jpg";
-import chalweHeadshot from "@/assets/chalwe-chikoka.jpg.asset.json";
+import chalweHeadshot from "@/assets/chalwe-chikoka.jpg";
 
 const values = [
   {
@@ -35,7 +35,7 @@ const managementTeam = [
   { name: "ERAS MUNUNG", role: "Director General", image: teamMember1 },
   { name: "NSONGA KINAMA ARMED", role: "Chief Financial Officer", image: teamMember2 },
   { name: "TOBI MTONGA", role: "Director of Operations", image: teamMember3 },
-  { name: "CHALWE CHIKOKA BANDA", role: "Country Manager", image: chalweHeadshot.url },
+  { name: "CHALWE CHIKOKA BANDA", role: "Country Manager", image: chalweHeadshot },
 ];
 
 const About = () => {
