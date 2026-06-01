@@ -35,7 +35,7 @@ const managementTeam = [
   { name: "ERAS MUNUNG", role: "Director General", image: teamMember1 },
   { name: "NSONGA KINAMA ARMED", role: "Chief Financial Officer", image: teamMember2 },
   { name: "TOBI MTONGA", role: "Director of Operations", image: teamMember3 },
-  { name: "CHALWE CHIKOKA BANDA", role: "Country Manager", image: chalweHeadshot.url },
+  { name: "CHALWE CHIKOKA BANDA", role: "Country Manager", image: chalweHeadshot },
 ];
 
 const About = () => {
