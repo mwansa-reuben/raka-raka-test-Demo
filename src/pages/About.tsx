@@ -179,11 +179,11 @@ const About = () => {
                 key={member.name}
                 className="bg-card p-6 rounded-lg border border-border text-center"
               >
-                <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20">
+                <div className="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4 border-2 border-primary/20">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
                 <h3 className="font-heading font-semibold text-foreground mb-1">
