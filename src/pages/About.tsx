@@ -4,7 +4,7 @@ import aboutTeam from "@/assets/about-rakaraka-team.jpg";
 import teamMember1 from "@/assets/team-member-1.jpg";
 import teamMember2 from "@/assets/team-member-2.jpg";
 import teamMember3 from "@/assets/team-member-3.jpg";
-import chalweHeadshot from "@/assets/chalwe-chikoka.jpg.asset.json";
+import chalweHeadshot from "@/assets/chalwe-chikoka.jpg";
 
 const values = [
   {
