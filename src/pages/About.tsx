@@ -1,10 +1,10 @@
 import { Target, Eye, Heart, Award, Lightbulb, Handshake } from "lucide-react";
 import Layout from "@/components/Layout";
 import aboutTeam from "@/assets/about-rakaraka-team.jpg";
-import teamMember1 from "@/assets/team-member-1.jpg";
-import teamMember2 from "@/assets/team-member-2.jpg";
 import teamMember3 from "@/assets/team-member-3.jpg";
 import chalweHeadshot from "@/assets/chalwe-chikoka.jpg";
+import erasHeadshot from "@/assets/eras-munung.jpg";
+import nsongaHeadshot from "@/assets/nsonga-ahmed.jpg";
 
 const values = [
   {
@@ -32,8 +32,8 @@ const values = [
 ];
 
 const managementTeam = [
-  { name: "ERAS MUNUNG", role: "Director General", image: teamMember1 },
-  { name: "NSONGA KINAMA ARMED", role: "Chief Financial Officer", image: teamMember2 },
+  { name: "ERAS MUNUNG", role: "Director General", image: erasHeadshot },
+  { name: "NSONGA KINAMA ARMED", role: "Chief Financial Officer", image: nsongaHeadshot },
   { name: "TOBI MTONGA", role: "Director of Operations", image: teamMember3 },
   { name: "CHALWE CHIKOKA BANDA", role: "Country Manager", image: chalweHeadshot },
 ];
