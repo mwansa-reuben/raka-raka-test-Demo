@@ -1,10 +1,10 @@
 import { Target, Eye, Heart, Award, Lightbulb, Handshake } from "lucide-react";
 import Layout from "@/components/Layout";
 import aboutTeam from "@/assets/about-rakaraka-team.jpg";
-import teamMember1 from "@/assets/team-member-1.jpg";
-import teamMember2 from "@/assets/team-member-2.jpg";
 import teamMember3 from "@/assets/team-member-3.jpg";
 import chalweHeadshot from "@/assets/chalwe-chikoka.jpg";
+import erasHeadshot from "@/assets/eras-munung.jpg";
+import nsongaHeadshot from "@/assets/nsonga-ahmed.jpg";
 
 const values = [
   {
