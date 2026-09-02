@@ -11,6 +11,7 @@ const contactInfo = [
     icon: Phone,
     title: "Phone",
     details: ["+260 977 375 545"],
+     details: ["+260 977 375 545"],
     action: "tel:+26057987427",
   },
   {
